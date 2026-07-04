@@ -21,7 +21,6 @@
 - HTML / CSS
 
 ### Backend:
-- Node.js
 - Python (FastAPI)
 
 ### База данных:
