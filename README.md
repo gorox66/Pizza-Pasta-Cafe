@@ -19,6 +19,7 @@
 - TypeScript
 - JavaScript
 - HTML / CSS
+- Node.js
 
 ### Backend:
 - Python (FastAPI)
