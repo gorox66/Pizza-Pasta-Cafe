@@ -34,7 +34,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # в продакшне указать конкретный домен
+    allow_origins=["*"],   
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -56,7 +56,7 @@ def make_token(user_id: int, email: str) -> str:
     return base64.b64encode(raw.encode()).decode()
 
 def decode_token(token: str) -> Optional[int]:
-    """Возвращает user_id из токена, или None если невалидный."""
+    """Возвращает user_id из токена, или None если невалидный"""
     try:
         decoded = base64.b64decode(token.encode()).decode()
         user_id = int(decoded.split(":")[0])
@@ -124,7 +124,7 @@ def login(body: LoginRequest):
 
 @app.get("/api/auth/me", response_model=UserResponse, tags=["Auth"])
 def get_me(authorization: Optional[str] = Header(default=None)):
-    """Возвращает данные текущего пользователя по токену."""
+    """Возвращает данные текущего пользователя по токену"""
     user_id = get_current_user_id(authorization)
     if not user_id:
         raise HTTPException(status_code=401, detail="Требуется авторизация")
@@ -146,7 +146,7 @@ def get_me(authorization: Optional[str] = Header(default=None)):
 
 @app.get("/api/menu", response_model=List[MenuItemResponse], tags=["Menu"])
 def get_menu(category: Optional[str] = None):
-    """Возвращает всё меню или фильтрует по категории (pizza/pasta/salad/dessert/drink)."""
+    """Возвращает всё меню или фильтрует по категории (pizza/pasta/salad/dessert/drink)"""
     conn = get_connection()
     cur  = conn.cursor()
 
@@ -163,7 +163,7 @@ def get_menu(category: Optional[str] = None):
 
 @app.get("/api/menu/{item_id}", response_model=MenuItemResponse, tags=["Menu"])
 def get_menu_item(item_id: int):
-    """Возвращает одну позицию меню по id."""
+    """Возвращает одну позицию меню по id"""
     conn = get_connection()
     cur  = conn.cursor()
     cur.execute("SELECT * FROM menu_items WHERE id = ?", (item_id,))
@@ -179,7 +179,7 @@ def get_menu_item(item_id: int):
 
 @app.post("/api/orders", response_model=OrderResponse, tags=["Orders"])
 def create_order(body: CreateOrderRequest, authorization: Optional[str] = Header(default=None)):
-    """Создаёт новый заказ. user_id берётся из токена если авторизован."""
+    """Создаёт новый заказ user_id берётся из токена если авторизован"""
     user_id = get_current_user_id(authorization)
 
     total      = sum(item.price * item.qty for item in body.items)
@@ -205,7 +205,7 @@ def create_order(body: CreateOrderRequest, authorization: Optional[str] = Header
 
 @app.get("/api/orders", response_model=List[OrderResponse], tags=["Orders"])
 def get_my_orders(authorization: Optional[str] = Header(default=None)):
-    """Возвращает заказы текущего авторизованного пользователя."""
+    """Возвращает заказы текущего авторизованного пользователя"""
     user_id = get_current_user_id(authorization)
     if not user_id:
         raise HTTPException(status_code=401, detail="Требуется авторизация")
@@ -224,7 +224,7 @@ def get_my_orders(authorization: Optional[str] = Header(default=None)):
 
 @app.patch("/api/orders/{order_id}/cancel", response_model=OrderResponse, tags=["Orders"])
 def cancel_order(order_id: int, authorization: Optional[str] = Header(default=None)):
-    """Отменяет заказ. Можно отменить только свой заказ."""
+    """Отменяет заказ"""
     user_id = get_current_user_id(authorization)
 
     conn = get_connection()
@@ -258,7 +258,7 @@ def cancel_order(order_id: int, authorization: Optional[str] = Header(default=No
 
 @app.post("/api/bookings", response_model=BookingResponse, tags=["Bookings"])
 def create_booking(body: CreateBookingRequest):
-    """Создаёт бронирование стола."""
+    """Создаёт бронирование стола"""
     conn = get_connection()
     cur  = conn.cursor()
     cur.execute(
@@ -279,5 +279,5 @@ def create_booking(body: CreateBookingRequest):
 
 @app.get("/api/health", response_model=MessageResponse, tags=["System"])
 def health():
-    """Проверка работоспособности сервера."""
+    """Проверка работоспособности сервера"""
     return MessageResponse(message="OK")

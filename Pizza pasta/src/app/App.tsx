@@ -53,30 +53,30 @@ function sha256sim(s: string): string {
 
 // ─── Static menu (оффлайн-режим) ─────────────────────────────────────────────
 const STATIC_MENU: MenuItem[] = [
-  { id:1,  name:"Маргарита",         price:450, category:"pizza",   image:"https://images.unsplash.com/photo-1680405620826-83b0f0f61b28?w=600&h=400&fit=crop&auto=format", description:"Томатный соус, моцарелла, базилик" },
-  { id:2,  name:"Пепперони",         price:550, category:"pizza",   image:"https://images.unsplash.com/photo-1667207394004-acb6aaf4790e?w=600&h=400&fit=crop&auto=format", description:"Томатный соус, моцарелла, пепперони" },
-  { id:3,  name:"Четыре сыра",       price:580, category:"pizza",   image:"https://images.unsplash.com/photo-1773308498493-ea7b44ac8237?w=600&h=400&fit=crop&auto=format", description:"Моцарелла, горгонзола, пармезан, рикотта" },
-  { id:4,  name:"Вегетарианская",    price:500, category:"pizza",   image:"https://images.unsplash.com/photo-1773308498493-ea7b44ac8237?w=600&h=400&fit=crop&auto=format", description:"Томатный соус, перец, грибы, оливки" },
-  { id:5,  name:"Карбонара",         price:480, category:"pasta",   image:"https://images.unsplash.com/photo-1588013273468-315fd88ea34c?w=600&h=400&fit=crop&auto=format", description:"Спагетти, бекон, яйцо, пармезан" },
-  { id:6,  name:"Болоньезе",         price:460, category:"pasta",   image:"https://images.unsplash.com/photo-1598866594230-a7c12756260f?w=600&h=400&fit=crop&auto=format", description:"Тальятелле, мясной соус, томаты, пармезан" },
-  { id:7,  name:"Примавера",         price:440, category:"pasta",   image:"https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=600&h=400&fit=crop&auto=format", description:"Лингуине, сезонные овощи, оливковое масло" },
-  { id:8,  name:"Цезарь с курицей",  price:380, category:"salad",   image:"https://images.unsplash.com/photo-1746211108786-ca20c8f80ecd?w=600&h=400&fit=crop&auto=format", description:"Романо, курица, пармезан, соус цезарь" },
-  { id:9,  name:"Капрезе",           price:350, category:"salad",   image:"https://images.unsplash.com/photo-1746211224437-8340316b288d?w=600&h=400&fit=crop&auto=format", description:"Томаты, моцарелла, базилик, оливковое масло" },
-  { id:10, name:"Тирамису",          price:320, category:"dessert", image:"https://images.unsplash.com/photo-1782503708390-4e5fff098d57?w=600&h=400&fit=crop&auto=format", description:"Маскарпоне, савоярди, кофе, какао" },
-  { id:11, name:"Панна котта",       price:290, category:"dessert", image:"https://images.unsplash.com/photo-1778008402773-f27c96136020?w=600&h=400&fit=crop&auto=format", description:"Сливки, ваниль, клубничный соус" },
-  { id:12, name:"Шоколадный фондан", price:340, category:"dessert", image:"https://images.unsplash.com/photo-1769434128978-5bdcb5c7ee2a?w=600&h=400&fit=crop&auto=format", description:"Горячий кекс с жидкой начинкой" },
-  { id:13, name:"Эспрессо",          price:120, category:"drink",   image:"https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?w=600&h=400&fit=crop&auto=format", description:"Крепкий итальянский кофе" },
-  { id:14, name:"Капучино",          price:160, category:"drink",   image:"https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?w=600&h=400&fit=crop&auto=format", description:"Эспрессо с нежной молочной пеной" },
-  { id:15, name:"Клубничный лимонад",price:180, category:"drink",   image:"https://images.unsplash.com/photo-1583898350903-99fa829dad3d?w=600&h=400&fit=crop&auto=format", description:"Клубника, лимон, мята, газированная вода" },
-  { id:16, name:"Фруктовый сок",     price:150, category:"drink",   image:"https://images.unsplash.com/photo-1583898350727-9bf2e476c242?w=600&h=400&fit=crop&auto=format", description:"Свежевыжатый, без сахара" },
+  { id:1,  name:"Маргарита", price:710, category:"pizza", image:"/img/margherita.jpg", description:"Томатный соус, моцарелла, базилик" },
+  { id:2,  name:"Пепперони", price:890, category:"pizza", image:"/img/pepperoni.jpg", description:"Томатный соус, моцарелла, пепперони" },
+  { id:3,  name:"Четыре сыра", price:900, category:"pizza", image:"/img/four-cheese.jpg", description:"Моцарелла, горгонзола, пармезан, рикотта" },
+  { id:4,  name:"Вегетарианская", price:850, category:"pizza", image:"/img/veget.jpeg", description:"Томатный соус, перец, грибы, оливки" },
+  { id:5,  name:"Карбонара", price:820, category:"pasta", image:"/img/carbonara.jpg", description:"Спагетти, бекон, яйцо, пармезан" },
+  { id:6,  name:"Болоньезе", price:780, category:"pasta", image:"/img/bolognese.jpg", description:"Тальятелле, мясной соус, томаты, пармезан" },
+  { id:7,  name:"Примавера", price:700, category:"pasta", image:"/img/primavera.jpg", description:"Лингуине, сезонные овощи, оливковое масло" },
+  { id:8,  name:"Цезарь с курицей", price:400, category:"salad", image:"/img/caesar.png", description:"Романо, курица, пармезан, соус цезарь" },
+  { id:9,  name:"Капрезе", price:350, category:"salad", image:"/img/caprese.jpg", description:"Томаты, моцарелла, базилик, оливковое масло" },
+  { id:10, name:"Тирамису", price:400, category:"dessert", image:"/img/tiramicy.jpg", description:"Маскарпоне, савоярди, кофе, какао" },
+  { id:11, name:"Панна котта", price:480, category:"dessert", image:"/img/panna_cota.jpeg", description:"Сливки, ваниль, клубничный соус" },
+  { id:12, name:"Шоколадный фондан", price:450, category:"dessert", image:"/img/fondan.jpg", description:"Горячий кекс с жидкой начинкой" },
+  { id:13, name:"Эспрессо", price:170, category:"drink", image:"/img/ecspersso.jpg", description:"Крепкий итальянский кофе" },
+  { id:14, name:"Капучино", price:180, category:"drink", image:"/img/capuchinno.jpg", description:"Эспрессо с нежной молочной пеной" },
+  { id:15, name:"Клубничный лимонад",price:210, category:"drink", image:"/img/clubnika.jpg", description:"Клубника, лимон, мята, газированная вода" },
+  { id:16, name:"Апельсиновый сок", price:215, category:"drink", image:"/img/sok.jpg", description:"Свежевыжатый, без сахара" },
 ];
 
 const CATEGORIES = [
-  { key:"pizza",   label:"Пицца"   },
-  { key:"pasta",   label:"Паста"   },
-  { key:"salad",   label:"Салаты"  },
+  { key:"pizza", label:"Пицца"   },
+  { key:"pasta", label:"Паста"   },
+  { key:"salad", label:"Салаты"  },
   { key:"dessert", label:"Десерты" },
-  { key:"drink",   label:"Напитки" },
+  { key:"drink", label:"Напитки" },
 ];
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -117,29 +117,29 @@ const inp = (err?: string) =>
 // ─── Main App ─────────────────────────────────────────────────────────────────
 export default function App() {
   // Connection
-  const [online, setOnline]       = useState<boolean | null>(null);
+  const [online, setOnline] = useState<boolean | null>(null);
 
   // Data
-  const [menu, setMenu]           = useState<MenuItem[]>([]);
-  const [user, setUser]           = useState<UserInfo | null>(null);
-  const [orders, setOrders]       = useState<Order[]>([]);
-  const [cart, setCart]           = useState<CartItem[]>([]);
+  const [menu, setMenu] = useState<MenuItem[]>([]);
+  const [user, setUser] = useState<UserInfo | null>(null);
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   // UI
   const [activeCat, setActiveCat] = useState("pizza");
-  const [modal, setModal]         = useState<string | null>(null);
-  const [authTab, setAuthTab]     = useState<"login" | "register">("login");
+  const [modal, setModal] = useState<string | null>(null);
+  const [authTab, setAuthTab] = useState<"login" | "register">("login");
   const [mobileNav, setMobileNav] = useState(false);
   const [orderStep, setOrderStep] = useState(1);
-  const [bookOk, setBookOk]       = useState(false);
-  const [loading, setLoading]     = useState(false);
-  const [errors, setErrors]       = useState<Record<string, string>>({});
+  const [bookOk, setBookOk] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   // Forms
-  const [loginF, setLoginF]   = useState({ email:"", password:"" });
-  const [regF, setRegF]       = useState({ name:"", email:"", phone:"", password:"", agree: false });
-  const [orderF, setOrderF]   = useState({ name:"", phone:"", address:"" });
-  const [bookF, setBookF]     = useState({ date:"", time:"", guests:"2", name:"", phone:"" });
+  const [loginF, setLoginF] = useState({ email:"", password:"" });
+  const [regF, setRegF] = useState({ name:"", email:"", phone:"", password:"", agree: false });
+  const [orderF, setOrderF] = useState({ name:"", phone:"", address:"" });
+  const [bookF, setBookF] = useState({ date:"", time:"", guests:"2", name:"", phone:"" });
 
   // ── Init ──
   useEffect(() => {
@@ -207,7 +207,7 @@ export default function App() {
   // ── Auth ──
   const handleLogin = async () => {
     const e: Record<string, string> = {};
-    if (!loginF.email)    e.email    = "Введите email";
+    if (!loginF.email) e.email = "Введите email";
     if (!loginF.password) e.password = "Введите пароль";
     setErrors(e); if (Object.keys(e).length) return;
     setLoading(true);
@@ -235,10 +235,10 @@ export default function App() {
 
   const handleRegister = async () => {
     const e: Record<string, string> = {};
-    if (!regF.name.trim())           e.name     = "Введите имя";
-    if (!regF.email.includes("@"))   e.email    = "Введите корректный email";
-    if (regF.password.length < 6)    e.password = "Пароль — минимум 6 символов";
-    if (!regF.agree)                 e.agree    = "Необходимо принять соглашение";
+    if (!regF.name.trim()) e.name = "Введите имя";
+    if (!regF.email.includes("@")) e.email = "Введите корректный email";
+    if (regF.password.length < 6) e.password = "Пароль — минимум 6 символов";
+    if (!regF.agree) e.agree = "Необходимо принять соглашение";
     setErrors(e); if (Object.keys(e).length) return;
     setLoading(true);
     try {
@@ -272,8 +272,8 @@ export default function App() {
   // ── Order ──
   const handlePlaceOrder = async () => {
     const e: Record<string, string> = {};
-    if (!orderF.name.trim())    e.oName    = "Введите имя";
-    if (!orderF.phone.trim())   e.oPhone   = "Введите телефон";
+    if (!orderF.name.trim()) e.oName = "Введите имя";
+    if (!orderF.phone.trim()) e.oPhone = "Введите телефон";
     if (!orderF.address.trim()) e.oAddress = "Введите адрес";
     setErrors(e); if (Object.keys(e).length) return;
     setLoading(true);
@@ -285,8 +285,8 @@ export default function App() {
           method: "POST",
           body: JSON.stringify({
             items,
-            address:        orderF.address,
-            customer_name:  orderF.name,
+            address: orderF.address,
+            customer_name: orderF.name,
             customer_phone: orderF.phone,
           }),
         });
@@ -328,10 +328,10 @@ export default function App() {
   // ── Booking ──
   const handleBooking = async () => {
     const e: Record<string, string> = {};
-    if (!bookF.date)          e.bDate  = "Выберите дату";
-    if (!bookF.time)          e.bTime  = "Выберите время";
-    if (!bookF.name.trim())   e.bName  = "Введите имя";
-    if (!bookF.phone.trim())  e.bPhone = "Введите телефон";
+    if (!bookF.date) e.bDate  = "Выберите дату";
+    if (!bookF.time) e.bTime  = "Выберите время";
+    if (!bookF.name.trim()) e.bName  = "Введите имя";
+    if (!bookF.phone.trim()) e.bPhone = "Введите телефон";
     setErrors(e); if (Object.keys(e).length) return;
     setLoading(true);
     try {
@@ -339,11 +339,11 @@ export default function App() {
         await apiFetch("/bookings", {
           method: "POST",
           body: JSON.stringify({
-            name:         bookF.name,
-            phone:        bookF.phone,
+            name: bookF.name,
+            phone: bookF.phone,
             booking_date: bookF.date,
             booking_time: bookF.time,
-            guests:       Number(bookF.guests),
+            guests: Number(bookF.guests),
           }),
         });
       }
@@ -374,7 +374,7 @@ export default function App() {
           <a href="#" className="text-xl font-bold tracking-tight text-foreground shrink-0">Pizza</a>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#menu"    className="hover:text-primary transition-colors">Меню</a>
+            <a href="#menu" className="hover:text-primary transition-colors">Меню</a>
             <a href="#booking" className="hover:text-primary transition-colors">Бронь стола</a>
           </div>
 
@@ -402,7 +402,7 @@ export default function App() {
 
         {mobileNav && (
           <div className="md:hidden border-t border-border bg-white px-4 py-3 flex flex-col gap-3 text-sm font-medium">
-            <a href="#menu"    onClick={() => setMobileNav(false)} className="hover:text-primary transition-colors">Меню</a>
+            <a href="#menu" onClick={() => setMobileNav(false)} className="hover:text-primary transition-colors">Меню</a>
             <a href="#booking" onClick={() => setMobileNav(false)} className="hover:text-primary transition-colors">Бронь стола</a>
           </div>
         )}
@@ -412,7 +412,7 @@ export default function App() {
       <section className="pt-14">
         <div className="relative flex items-center justify-center bg-stone-900 overflow-hidden" style={{ minHeight:"88vh" }}>
           <img
-            src="https://images.unsplash.com/photo-1667207394004-acb6aaf4790e?w=1600&h=900&fit=crop&auto=format"
+            src="/img/hero.jpg"
             alt="Пицца"
             className="absolute inset-0 w-full h-full object-cover opacity-45 select-none"
           />
@@ -839,11 +839,11 @@ export default function App() {
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">4. Хранение данных</p>
-                <p>Данные хранятся в базе данных SQLite3 на сервере. В оффлайн-режиме — в localStorage браузера. Удалив аккаунт, вы удалите все данные.</p>
+                <p>Данные хранятся в базе данных на сервере. Удалив аккаунт, вы удалите все данные.</p>
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">5. Права пользователя</p>
-                <p>Вы можете в любой момент отозвать согласие. По вопросам обработки данных: Волгоград, 2026.</p>
+                <p>Вы можете в любой момент отозвать согласие.</p>
               </div>
             </div>
             <button onClick={closeModal}
