@@ -52,11 +52,10 @@ npm run dev
 ---
 
 __Если вы хотите запустить бэкенд (FastAPI):__
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-Если выдаёт ошибку на "uvicorn main:app --reload", то попробуйте:
-python -m pip install -r requirements.txt
+1) cd backend
+2) python -m venv venv (тут могут быть проблемы, пробуйте разные варианты вместо python если не работает: py, python3)
+3) ./venv/Scripts/activate
+4) python -m pip install -r requirements.txt
+5) uvicorn main:app --reload
 
 Бэкенд запустится на http://localhost:8000
